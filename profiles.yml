@@ -1,24 +1,24 @@
 dbtdemo5:
   target: dev
   outputs:
-    BRONZE:
+    YONG:
       type: snowflake
       role: ACCOUNTADMIN
       warehouse: COMPUTE_WH
       database: DBT_DEMO5
-      schema: BRONZE
+      schema: YONG
       threads: 8
-    SILVER:
+    JANE:
       type: snowflake
       role: ACCOUNTADMIN
       warehouse: COMPUTE_WH
       database: DBT_DEMO5
-      schema: SILVER
+      schema: JANE
       threads: 8
-    GOLD:
+    JOHN:
       type: snowflake
       role: ACCOUNTADMIN
       warehouse: COMPUTE_WH
       database: DBT_DEMO5
-      schema: GOLD
+      schema: JOHN
       threads: 8
