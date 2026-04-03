@@ -15,7 +15,7 @@ macro-paths:
 snapshot-paths:
   - snapshots
 models:
-  dbtdemo5:
+  snowflake_dbt_demo5:
     silver:
       +materialized: view
     gold:
