@@ -1,0 +1,24 @@
+dbtdemo5:
+  target: dev
+  outputs:
+    BRONZE:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: DBT_DEMO5
+      schema: BRONZE
+      threads: 8
+    SILVER:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: DBT_DEMO5
+      schema: SILVER
+      threads: 8
+    GOLD:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: DBT_DEMO5
+      schema: GOLD
+      threads: 8
