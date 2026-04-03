@@ -1,0 +1,17 @@
+SELECT
+    c.CLAIM_ID,
+    c.MEMBER_ID,
+    c.PROVIDER_ID,
+    c.CLAIM_DATE,
+
+    c.DIAGNOSIS_CODE,
+    c.PROCEDURE_CODE,
+
+    c.CLAIM_AMOUNT,
+    c.STATUS,
+
+    -- Derived metrics
+    CASE WHEN c.STATUS = 'PAID' THEN c.CLAIM_AMOUNT ELSE 0 END AS PAID_AMOUNT,
+    CASE WHEN c.STATUS = 'DENIED' THEN c.CLAIM_AMOUNT ELSE 0 END AS DENIED_AMOUNT
+
+FROM {{ ref('stg_claims') }} c
