@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dim_members
+    columns:
+      - name: MEMBER_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_providers
+    columns:
+      - name: PROVIDER_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_claims
+    columns:
+      - name: CLAIM_ID
+        tests:
+          - not_null
+          - unique
+
+      - name: MEMBER_ID
+        tests:
+          - relationships:
+              to: ref('dim_members')
+              field: MEMBER_ID
+
+      - name: PROVIDER_ID
+        tests:
+          - relationships:
+              to: ref('dim_providers')
+              field: PROVIDER_ID

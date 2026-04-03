@@ -18,3 +18,5 @@ models:
   dbtdemo5:
     silver:
       +materialized: view
+    gold:
+      +materialized: table
