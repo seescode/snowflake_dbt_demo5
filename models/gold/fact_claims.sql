@@ -1,5 +1,5 @@
 SELECT
-    c.CLAIM_ID,
+    c.CLAIM_ID AS CLAIM35,
     c.MEMBER_ID,
     c.PROVIDER_ID,
     c.CLAIM_DATE,
