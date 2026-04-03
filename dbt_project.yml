@@ -16,4 +16,5 @@ snapshot-paths:
   - snapshots
 models:
   dbtdemo5:
-    +materialized: view
+    silver:
+      +materialized: view
