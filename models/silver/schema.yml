@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_members
+    columns:
+      - name: MEMBER_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_providers
+    columns:
+      - name: PROVIDER_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_claims
+    columns:
+      - name: CLAIM_ID
+        tests:
+          - not_null
+          - unique
+
+      - name: MEMBER_ID
+        tests:
+          - not_null
+
+      - name: CLAIM_AMOUNT
+        tests:
+          - not_null

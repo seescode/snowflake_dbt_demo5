@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: DBT_DEMO5
+    schema: BRONZE
+    tables:
+      - name: MEMBERS_RAW
+      - name: PROVIDERS_RAW
+      - name: CLAIMS_RAW
