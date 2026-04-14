@@ -28,7 +28,7 @@ steps:
 - script: |
     mkdir -p "$DBT_PROFILES_DIR"
     cat <<EOF > "$DBT_PROFILES_DIR/profiles.yml"
-    snowflake_dbt_demo2:
+    dbtdemo5:
       target: ci
       outputs:
         ci:
